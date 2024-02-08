@@ -11,7 +11,6 @@ MY_KEY = os.getenv("API_KEY")
 headers = {
     "Content-Type": "application/json",
     "Authorization": f"Bearer {MY_KEY}",
-    
 }
 
 # Sample requests to submit
@@ -42,3 +41,4 @@ for request_data in requests_data:
     print("Request:", request_data)
     print("Response:", response)
     print("\n")
+    print("changes made")
