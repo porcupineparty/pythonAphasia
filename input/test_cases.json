@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "utterance": "table book help",
+    "context": {
+      "setting": "home",
+      "tone": "neutral",
+      "conversation_type": "chat"
+    },
+    "bio": {
+      "name": "Jimmy Lee",
+      "age": 36,
+      "about_me": "I am an accountant from Montana. I have 3 kids and a dog. I love to hike and fish."
+    },
+    "good_completions": [
+      "Can you hand me that book on the table?",
+      "I need a table or something to put my book on.",
+      "The table has too many books on it.",
+      "See that self-help book on that table?",
+      "Please set this book on the table."
+    ]
+  },
+  {
+    "id": 2,
+    "utterance": "i sandwich eat not not",
+    "context": {
+      "setting": "home",
+      "tone": "neutral",
+      "conversation_type": "chat"
+    },
+    "bio": {
+      "name": "Phil Johnson",
+      "age": 59,
+      "about_me": "Retired teacher. Live in NYC."
+    },
+    "good_completions": [
+      "I want a sandwich, but not right now.",
+      "I'm not going to eat a sandwich.",
+      "I'm allergic to that sandwich and won't eat it.",
+      "I don't know what I want for lunch, but probably not a sandwich.",
+      "Are you going to eat a sandwich right now?",
+      "I can make a sandwich now for you if you'd like."
+    ]
+  }
+]

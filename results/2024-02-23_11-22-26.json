@@ -1,0 +1,139 @@
+{
+    "results": [
+        {
+            "prompt_id": 1,
+            "model": "gpt-3.5-turbo",
+            "temperature": 0.7,
+            "max_tokens": 50,
+            "num_responses": 3,
+            "scores": [
+                {
+                    "test_case_id": 1,
+                    "cosine_similarity_score": 0.9212906360626221
+                },
+                {
+                    "test_case_id": 2,
+                    "cosine_similarity_score": 0.9045135378837585
+                }
+            ],
+            "average_cosine_similarity_score": 0.9129021167755127
+        },
+        {
+            "prompt_id": 2,
+            "model": "gpt-3.5-turbo",
+            "temperature": 0.7,
+            "max_tokens": 50,
+            "num_responses": 3,
+            "scores": [
+                {
+                    "test_case_id": 1,
+                    "cosine_similarity_score": 0.4506179988384247
+                },
+                {
+                    "test_case_id": 2,
+                    "cosine_similarity_score": 0.529194712638855
+                }
+            ],
+            "average_cosine_similarity_score": 0.489906370639801
+        },
+        {
+            "prompt_id": 3,
+            "model": "gpt-3.5-turbo",
+            "temperature": 0.7,
+            "max_tokens": 50,
+            "num_responses": 3,
+            "scores": [
+                {
+                    "test_case_id": 1,
+                    "cosine_similarity_score": 0.4760894775390625
+                },
+                {
+                    "test_case_id": 2,
+                    "cosine_similarity_score": 0.4528690278530121
+                }
+            ],
+            "average_cosine_similarity_score": 0.4644792675971985
+        },
+        {
+            "prompt_id": 4,
+            "model": "gpt-3.5-turbo",
+            "temperature": 0.7,
+            "max_tokens": 50,
+            "num_responses": 3,
+            "scores": [
+                {
+                    "test_case_id": 1,
+                    "cosine_similarity_score": 0.7027336955070496
+                },
+                {
+                    "test_case_id": 2,
+                    "cosine_similarity_score": 0.7009589076042175
+                }
+            ],
+            "average_cosine_similarity_score": 0.7018463015556335
+        }
+    ],
+    "prompts": [
+        {
+            "id": 1,
+            "prompt": "You are an expert in communication disorders, specifically Broca's aphasia. Your task is to transform an utterance from a person with Broca's aphasia into a grammatically correct sentence and predict the next several words they will say. Do NOT request any additional information or context or ask any questions. Only provide the transformed predicted utterances. Examples:\n          1. \"Walk dog\" => \"I will take the dog for a walk\"\n          2. \"Book book two table\" => \"There are two books on the table\"\n          3. \"i want take kids\" => \"I want to take the kids to the park\"\n          4. \"sweaty i need\" => \"I am sweaty and I need a hot shower\"\n          5. \"cat seems cat\" => \"The cat seems hungry\"\n          6. \"i i need i need some\" => \"I need to get some sleep\"\n          \n        Please consider the following about the speaker:\n          - name: {name}\n          - age: {age}\n          - self-description: {about_me}\n          - current setting: {setting}\n          - type of conversation they are having: {conversation_type}\n          - tone of voice they are trying to convey: {tone}\n        Please provide a single transformed/predicted sentece for the following utterance: \n        {utterance}\n      "
+        },
+        {
+            "id": 2,
+            "prompt": "Please write me a very short story. It needs to be literaly 5-10 words long. Please be funny."
+        },
+        {
+            "id": 3,
+            "prompt": "You are an `echo` bot. Simply send back the same message that you receive."
+        },
+        {
+            "id": 4,
+            "prompt": "Follow this decision tree for your output:\n      If the utterance is 'table book help', then respond with 'Can you hand me that book on the table?'.\n      If the utterance is 'i sandwich eat not not', then respond with 'I'm not going to eat a sandwich.'.\n      "
+        }
+    ],
+    "test_cases": [
+        {
+            "id": 1,
+            "utterance": "table book help",
+            "context": {
+                "setting": "home",
+                "tone": "neutral",
+                "conversation_type": "chat"
+            },
+            "bio": {
+                "name": "Jimmy Lee",
+                "age": 36,
+                "about_me": "I am an accountant from Montana. I have 3 kids and a dog. I love to hike and fish."
+            },
+            "good_completions": [
+                "Can you hand me that book on the table?",
+                "I need a table or something to put my book on.",
+                "The table has too many books on it.",
+                "See that self-help book on that table?",
+                "Please set this book on the table."
+            ]
+        },
+        {
+            "id": 2,
+            "utterance": "i sandwich eat not not",
+            "context": {
+                "setting": "home",
+                "tone": "neutral",
+                "conversation_type": "chat"
+            },
+            "bio": {
+                "name": "Phil Johnson",
+                "age": 59,
+                "about_me": "Retired teacher. Live in NYC."
+            },
+            "good_completions": [
+                "I want a sandwich, but not right now.",
+                "I'm not going to eat a sandwich.",
+                "I'm allergic to that sandwich and won't eat it.",
+                "I don't know what I want for lunch, but probably not a sandwich.",
+                "Are you going to eat a sandwich right now?",
+                "I can make a sandwich now for you if you'd like."
+            ]
+        }
+    ]
+}
